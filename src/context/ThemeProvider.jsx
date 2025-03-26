@@ -1,16 +1,11 @@
-"use client"
+"use client";
 
 import { MyContext } from "./ThemeContext";
 
-const ThemeProvider = ({children}) => {
+const ThemeProvider = ({ children }) => {
+  const values = {};
 
-    const values = {}
-    
-    return (
-        <MyContext.Provider value={values}>
-            {children}
-        </MyContext.Provider>
-    )
-}
+  return <MyContext.Provider value={values}>{children}</MyContext.Provider>;
+};
 
 export default ThemeProvider;
